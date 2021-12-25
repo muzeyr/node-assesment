@@ -7,6 +7,9 @@ A RESTful API with a single endpoint that fetches the data in the provided Mongo
 - [Setting up the project](#setting-up)
 - [Install express](#express-install)
 - [Install Dotenv](#dotenv-install)
+- [Install nodemon](#nodemon-install)
+- [Install nodemon](#nodemon-install)
+- [Swagger ](#swagger-install)
 
 
 
@@ -23,7 +26,14 @@ npm install express --save
 ```bash
 npm install dotenv
 ```
+### Nodemon Install
+```bash
+npm install -g nodemon
+```
 
-
+### Swagger Install
+```bash
+npm install swagger-ui-express --save
+```
 
 
