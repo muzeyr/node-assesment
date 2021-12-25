@@ -6,6 +6,9 @@ A RESTful API with a single endpoint that fetches the data in the provided Mongo
 ## TAble of Contents
 - [Setting up the project](#setting-up)
 - [Install express](#express-install)
+- [Install Dotenv](#dotenv-install)
+
+
 
 
 ### Setting up the project:
@@ -16,5 +19,11 @@ npm init -y
 ```bash
 npm install express --save
 ```
+### Dotenv Install
+```bash
+npm install dotenv
+```
+
+
 
 
