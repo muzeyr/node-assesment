@@ -5,9 +5,16 @@ A RESTful API with a single endpoint that fetches the data in the provided Mongo
 
 ## TAble of Contents
 - [Setting up the project](#setting-up)
+- [Install express](#express-install)
 
 
 ### Setting up the project:
 ```bash
-- npm init -y
+npm init -y
 ```
+### Express Install
+```bash
+npm install express --save
+```
+
+
