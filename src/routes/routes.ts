@@ -3,12 +3,12 @@ import { body } from "express-validator";
 import AppController from "../controller/app.controller";
 import { routeValidator } from "../config/validation.handler";
 
-const Router = express.Router();
+const router = express.Router();
 
 /**
  * @description for post requests
  */
-Router.post(
+router.post(
 	"/search",
 	[
 		body("startDate").isDate({ format: "YYYY-MM-DD" }).withMessage("Must be a date with YYYY-MM-DD format"),
@@ -44,4 +44,4 @@ Router.post(
 	AppController
 );
 
-export default Router;
+export default router;

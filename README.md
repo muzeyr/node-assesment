@@ -10,6 +10,7 @@ A RESTful API with a single endpoint that fetches the data in the provided Mongo
 - [Install nodemon](#nodemon-install)
 - [Swagger ](#swagger-install)
 - [Mongo ](#mongodb-install)
+- [Swagger URL ](#swagger-url)
 
 
 ### Setting up the project:
@@ -67,3 +68,12 @@ cp .env.example .env
 
 * ### Demo data
 Use `http://localhost:3000/api/search` address via Postman `post` method, copy all in `node.postman_collection.json` file.
+
+
+
+https://muzeyr-assigment.herokuapp.com/docs/
+
+### Swagger URL
+
+* [https://muzeyr-assigment.herokuapp.com/docs/](https://muzeyr-assigment.herokuapp.com/docs/)
+
