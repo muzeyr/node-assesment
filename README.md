@@ -46,3 +46,24 @@ npm install mongoose
 npm install --save-dev eslint
 npx eslint --init
 ```
+
+
+## Commands
+
+
+* ### Installation
+```bash
+- git clone https://github.com/muzeyr/node-assesment
+  cd getir-assesment
+```
+
+* ### Edit .env file
+Set the  [ environment variables](#environment-variables) 
+
+```bash
+# open .env and modify the environment variables 
+cp .env.example .env
+```
+
+* ### Demo data
+Use `http://localhost:3000/api/search` address via Postman `post` method, copy all in `node_assigment.postman_collection.json` file.

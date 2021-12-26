@@ -141,7 +141,7 @@ describe("POST /api/search ", () => {
 		jest.clearAllMocks();
 	});
 });
-function beforeEach(arg0: (done: any) => any) {
-	throw new Error("Function not implemented.");
+function beforeEach(_arg0: (done: any) => any) {
+	throw new Error("Function not implemented."+_arg0);
 }
 
