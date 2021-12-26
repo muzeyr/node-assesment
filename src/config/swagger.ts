@@ -1,0 +1,85 @@
+const documentation = {
+	openapi: "3.0.1",
+	info: {
+		version: "1.0.1",
+		title: "Search",
+		description: "Search API for Getir Assesment",
+		license: {
+			name: "Apache 2.0",
+			url: "https://www.apache.org/licenses/LICENSE-2.0.html",
+		},
+	},
+	servers: [
+		{
+			url: "https://muzeyr-assesment.herokuapp.com/",
+			description: "Production server",
+		},
+		{
+			url: "http://localhost:3000/",
+			description: "Local server",
+		},
+	],
+	paths: {
+		"/api/search": {
+			post: {
+				tags: ["Search operations"],
+				operationId: "search",
+				requestBody: {
+					content: {
+						"application/json": {
+							schema: {
+								$ref: "#/components/schemas/request",
+							},
+						},
+					},
+					required: true,
+				},
+				responses: {},
+			},
+		},
+	},
+	components: {
+		schemas: {
+			startDate: {
+				type: "string",
+				description: "startDate format YYYY-MM-DD",
+				example: "2016-01-20",
+			},
+			endDate: {
+				type: "string",
+				description: "endDate format YYYY-MM-DD",
+				example: "2018-01-20",
+			},
+			minCount: {
+				type: "integer",
+				description: "Min Count Value",
+				example: 1,
+			},
+			maxCount: {
+				type: "integer",
+				description: "Max Count Value",
+				example: 3000,
+			},
+			request: {
+				type: "object",
+				properties: {
+					startDate: {
+						$ref: "#/components/schemas/startDate",
+					},
+					endDate: {
+						$ref: "#/components/schemas/endDate",
+					},
+					minCount: {
+						$ref: "#/components/schemas/minCount",
+					},
+					maxCount: {
+						$ref: "#/components/schemas/maxCount",
+					},
+				},
+			},
+		},
+	},
+};
+  
+export default documentation;
+  

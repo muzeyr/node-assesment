@@ -9,7 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/muzeyr/node-assesment.git"
   },
-
   "keywords": [],
   "author": "muzeyr",
   "license": "ISC",
@@ -24,7 +23,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
-    "mongoose": "^6.1.3",
+    "express-validator": "^6.14.0",
+    "mongoose": "^5.11.8",
     "swagger-ui-express": "^4.3.0"
   }
 }

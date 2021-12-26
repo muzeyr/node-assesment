@@ -16,35 +16,33 @@ A RESTful API with a single endpoint that fetches the data in the provided Mongo
 ```bash
 npm init -y
 ```
-### Express Install
+### Express 
 ```bash
 npm install --save express
 npm install -save-dev @types/express
 
 ```
-### Dotenv Install
+### Dotenv 
 ```bash
 npm install dotenv
 ```
-### Nodemon Install
+### Nodemon 
 ```bash
 npm install -g nodemon
 ```
 
-### Swagger Install
+### Swagger 
 ```bash
 npm install swagger-ui-express --save
 ```
 
-### Mongoose Install
+### Mongoose 
 ```bash
 npm install mongoose
 ```
 
-### Mongoose Install
+### Eslint Install
 ```bash
 npm install --save-dev eslint
 npx eslint --init
 ```
-
-
