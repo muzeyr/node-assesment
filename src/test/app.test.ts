@@ -51,52 +51,52 @@ describe("POST /api/search ", () => {
 			endDate: "2016-01-01",
 			minCount: 2700,
 			maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
-  test("When the startDate is missing", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      endDate: "2016-01-26",
-      minCount: 2700,
-      maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+	test("When the startDate is missing", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			endDate: "2016-01-26",
+			minCount: 2700,
+			maxCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
-  test("When the endDate is missing", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      minCount: 2700,
-      maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+	test("When the endDate is missing", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2016-01-26",
+			minCount: 2700,
+			maxCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
-  test("When the minCount is missing", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      endDate: "2021-01-26",
-      maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+	test("When the minCount is missing", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2016-01-26",
+			endDate: "2021-01-26",
+			maxCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
   test("When the maxCount is missing", async (done) => {
     const response = await request(app).post("/api/search").send({
@@ -111,8 +111,8 @@ describe("POST /api/search ", () => {
     done();
   });
 
-  test("Must be a positive number", async (done) => {
-    const response = await request(app).post("/api/search").send({
+	test("Must be a positive number", async (done) => {
+		const response = await request(app).post("/api/search").send({
       startDate: "2016-01-26",
       endDate: "2021-01-26",
       minCount: -1,
