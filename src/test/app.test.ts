@@ -98,50 +98,50 @@ describe("POST /api/search ", () => {
 		done();
 	});
 
-  test("When the maxCount is missing", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      endDate: "2021-01-26",
-      minCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+	test("When the maxCount is missing", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2016-01-26",
+			endDate: "2021-01-26",
+			minCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
 	test("Must be a positive number", async (done) => {
 		const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      endDate: "2021-01-26",
-      minCount: -1,
-      maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+			startDate: "2016-01-26",
+			endDate: "2021-01-26",
+			minCount: -1,
+			maxCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
-  test("Should specify json in the content type header", async () => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      endDate: "2018-02-02",
-      minCount: 2700,
-      maxCount: 3000,
-    });
-    expect(response.headers["content-type"]).toEqual(
-      expect.stringContaining("json")
-    );
-  });
+	test("Should specify json in the content type header", async () => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2016-01-26",
+			endDate: "2018-02-02",
+			minCount: 2700,
+			maxCount: 3000,
+		});
+		expect(response.headers["content-type"]).toEqual(
+			expect.stringContaining("json")
+		);
+	});
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
+	afterEach(() => {
+		jest.clearAllMocks();
+	});
 });
 function beforeEach(arg0: (done: any) => any) {
-  throw new Error("Function not implemented.");
+	throw new Error("Function not implemented.");
 }
 
