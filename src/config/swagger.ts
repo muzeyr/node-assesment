@@ -43,17 +43,17 @@ const documentation = {
 			startDate: {
 				type: "string",
 				description: "startDate format YYYY-MM-DD",
-				example: "2016-01-20",
+				example: "2016-01-26",
 			},
 			endDate: {
 				type: "string",
 				description: "endDate format YYYY-MM-DD",
-				example: "2018-01-20",
+				example: "2018-02-02",
 			},
 			minCount: {
 				type: "integer",
 				description: "Min Count Value",
-				example: 1,
+				example: 2700,
 			},
 			maxCount: {
 				type: "integer",
