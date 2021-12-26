@@ -11,7 +11,7 @@ const documentation = {
 	},
 	servers: [
 		{
-			url: "http://muzeyr-assigment.herokuapp.com/",
+			url: "https://muzeyr-assigment.herokuapp.com/",
 			description: "Production server",
 		},
 		{
