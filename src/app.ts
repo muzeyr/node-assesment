@@ -21,3 +21,4 @@ app.listen(port, () => {
 	console.log(`Swagger is listening at http://localhost:${port}/${docs}`);
 	return console.log(`Express is listening at http://localhost:${port}`);
 });
+export default app;

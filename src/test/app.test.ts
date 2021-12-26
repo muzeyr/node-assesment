@@ -6,31 +6,30 @@ import app from "../app";
 dotenv.config();
 
 beforeEach((done) => {
-  return mongoose.connect(
-    process.env.MONGO_DB_URI,
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => done()
-  );
+	return mongoose.connect(
+		{ useNewUrlParser: true, useUnifiedTopology: true },
+		() => done()
+	);
 });
 
 describe("POST /api/search ", () => {
-  test("Should have datas", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2016-01-26",
-      endDate: "2018-02-02",
-      minCount: 2700,
-      maxCount: 3000,
-    });
-    const searchedDatas = response?.body?.records.lenght > 0;
-    expect(response.body.code).toBe(0);
-    expect(response.body.msg).toBe("Success");
-    if (searchedDatas) {
-      expect(response.body.records[0]).toHaveProperty("key");
-      expect(response.body.records[0]).toHaveProperty("createdAt");
-      expect(response.body.records[0]).toHaveProperty("totalCount");
-    }
-    done();
-  });
+	test("Should have datas", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2016-01-26",
+			endDate: "2018-02-02",
+			minCount: 2700,
+			maxCount: 3000,
+		});
+		const searchedDatas = response?.body?.records.lenght > 0;
+		expect(response.body.code).toBe(0);
+		expect(response.body.msg).toBe("Success");
+		if (searchedDatas) {
+			expect(response.body.records[0]).toHaveProperty("key");
+			expect(response.body.records[0]).toHaveProperty("createdAt");
+			expect(response.body.records[0]).toHaveProperty("totalCount");
+		}
+		done();
+	});
 
   test("Must be a date format with YYYY-MM-DD", async (done) => {
     const response = await request(app).post("/api/search").send({
@@ -142,3 +141,7 @@ describe("POST /api/search ", () => {
     jest.clearAllMocks();
   });
 });
+function beforeEach(arg0: (done: any) => any) {
+  throw new Error("Function not implemented.");
+}
+
