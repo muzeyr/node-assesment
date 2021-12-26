@@ -31,26 +31,26 @@ describe("POST /api/search ", () => {
 		done();
 	});
 
-  test("Must be a date format with YYYY-MM-DD", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "01-01-2021",
-      endDate: "02-02-2021",
-      minCount: 2700,
-      maxCount: 3000,
-    });
-    expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(
-      "ValidationError, please check your request params"
-    );
-    done();
-  });
+	test("Must be a date format with YYYY-MM-DD", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "01-01-2021",
+			endDate: "02-02-2021",
+			minCount: 2700,
+			maxCount: 3000,
+		});
+		expect(response.body.code).toBe(2);
+		expect(response.body.msg).toBe(
+			"ValidationError, please check your request params"
+		);
+		done();
+	});
 
-  test("Must be startDate before endDate", async (done) => {
-    const response = await request(app).post("/api/search").send({
-      startDate: "2021-01-01",
-      endDate: "2016-01-01",
-      minCount: 2700,
-      maxCount: 3000,
+	test("Must be startDate before endDate", async (done) => {
+		const response = await request(app).post("/api/search").send({
+			startDate: "2021-01-01",
+			endDate: "2016-01-01",
+			minCount: 2700,
+			maxCount: 3000,
     });
     expect(response.body.code).toBe(2);
     expect(response.body.msg).toBe(
