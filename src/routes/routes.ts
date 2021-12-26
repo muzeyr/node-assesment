@@ -6,7 +6,7 @@ import { routeValidator } from "../config/validation.handler";
 const router = express.Router();
 
 /**
- * @description for post requests
+ * @description for post search
  */
 router.post(
 	"/search",

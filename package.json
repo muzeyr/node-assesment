@@ -1,6 +1,6 @@
 {
   "name": "node-assesment",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "src/app.ts",
   "scripts": {
     "start": "npm run tsc && NODE_ENV=production node dist/app.js",
