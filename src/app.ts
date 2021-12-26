@@ -13,19 +13,20 @@ import swaggerDocument from "./config/swagger";
 import { connectMongoose } from "./config/db";
 import router from "./routes/routes";
 
-connectMongoose();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use((req: Request, res: Response, next: NextFunction) => {
 	res.setHeader("Access-Control-Allow-Origin", "*");
-	res.setHeader("Access-Control-Allow-Methods", "POST");
+	res.setHeader("Access-Control-Allow-Methods", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
-  });
+});
+
 app.get('/', (req, res) => {
 	res.send('<script> window.location.replace("/docs");</script>')
 });
 app.use("/docs/", swaggerUi.serve, swaggerUi.setup(swaggerDocument, { explorer: false }));
-app.use("/api/",  cors(),router);
+app.use("/api/", router);
+connectMongoose();
 
 app.listen(port, () => {
 	console.log(`Swagger is listening at http://localhost:${port}/${docs}`);
