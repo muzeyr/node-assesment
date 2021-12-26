@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/muzeyr/node-assesment.git"
   },
-  "keywords": [],
+  "keywords": ["Node Express Assesment"],
   "author": "muzeyr",
   "license": "ISC",
   "devDependencies": {
@@ -33,5 +33,25 @@
     "heroku": "^7.59.2",
     "mongoose": "^5.11.8",
     "swagger-ui-express": "^4.3.0"
+  },
+
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.(test|spec).(ts|tsx)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true,
+        "tsconfig": "jest.tsconfig.json"
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/swagger.doc.ts"
+    ],
+    "testEnvironment": "node"
   }
 }

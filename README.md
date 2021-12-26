@@ -66,4 +66,4 @@ cp .env.example .env
 ```
 
 * ### Demo data
-Use `http://localhost:3000/api/search` address via Postman `post` method, copy all in `node_assigment.postman_collection.json` file.
+Use `http://localhost:3000/api/search` address via Postman `post` method, copy all in `node.postman_collection.json` file.

@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "35ab5efc-950f-4aa9-a9c5-42ca27e4b7ab",
+		"name": "node_assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "searchApi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"startDate\": \"2016-01-26\",\n  \"endDate\": \"2018-02-02\",\n  \"minCount\": 0,\n  \"maxCount\": 999999\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
