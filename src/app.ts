@@ -20,7 +20,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 	res.setHeader("Access-Control-Allow-Methods", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
 });
-
 app.get('/', (req, res) => {
 	res.send('<script> window.location.replace("/docs");</script>')
 });
