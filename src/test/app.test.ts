@@ -5,10 +5,12 @@ import app from "../app";
 
 dotenv.config();
 
+
 beforeEach((done) => {
 	return mongoose.connect(
-		{ useNewUrlParser: true, useUnifiedTopology: true },
-		() => done()
+	  process.env.MONGO_DB_URI,
+	  { useNewUrlParser: true, useUnifiedTopology: true },
+	  () => done()
 	);
 });
 
@@ -141,7 +143,3 @@ describe("POST /api/search ", () => {
 		jest.clearAllMocks();
 	});
 });
-function beforeEach(_arg0: (done: any) => any) {
-	throw new Error("Function not implemented."+_arg0);
-}
-
