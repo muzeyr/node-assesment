@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
 dotenv.config();
 const app = express();
-const cors = require("cors");
 const port = process.env.PORT || 4000;
 const docs = process.env.SWAGGER || "docs";
 
@@ -23,8 +22,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.get('/', (req, res) => {
 	res.send('<script> window.location.replace("/docs");</script>')
 });
-app.use("/docs/", swaggerUi.serve, swaggerUi.setup(swaggerDocument, { explorer: false }));
 app.use("/api/", router);
+app.use("/docs/", swaggerUi.serve, swaggerUi.setup(swaggerDocument, { explorer: false }));
 connectMongoose();
 
 app.listen(port, () => {

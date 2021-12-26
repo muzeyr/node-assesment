@@ -1,7 +1,7 @@
 const documentation = {
 	openapi: "3.0.1",
 	info: {
-		version: "1.0.3",
+		version: "1.0.4",
 		title: "Search",
 		description: "Search API for Getir Assesment",
 		license: {
