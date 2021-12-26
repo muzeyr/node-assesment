@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/docs/", swaggerUi.serve, swaggerUi.setup(swaggerDocument, { explorer: false }));
 app.use("/api/",  cors(),router);
+app.get('/', (req, res) => {
+	res.send('<script> window.location.replace("/docs");	</script>')
+});
 
 app.listen(port, () => {
 	console.log(`Swagger is listening at http://localhost:${port}/${docs}`);
