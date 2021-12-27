@@ -1,7 +1,7 @@
 const documentation = {
 	openapi: "3.0.1",
 	info: {
-		version: "1.0.4",
+		version: "1.0.7",
 		title: "Search",
 		description: "Search API for Getir Assesment",
 		license: {
@@ -11,7 +11,7 @@ const documentation = {
 	},
 	servers: [
 		{
-			url: "https://muzeyr-assesment.herokuapp.com/",
+			url: "https://muzeyr-assigment.herokuapp.com/",
 			description: "Production server",
 		},
 		{
