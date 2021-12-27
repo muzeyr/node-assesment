@@ -58,7 +58,7 @@ npx eslint --init
 * ### Installation
 ```bash
 - git clone https://github.com/muzeyr/node-assesment
-  cd getir-assesment
+  cd node-assesment
 ```
 
 * ### Edit .env file
